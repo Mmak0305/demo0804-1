@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片預覽</title>
+    <style>
+        .images-container {
+            display: flex;
+        }
+        .image-wrapper {
+            flex: 1;
+            padding: 10px;
+        }
+        .image-wrapper img {
+            max-width: 500px;
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h2>File uploaded successfully</h2>
+    <div class="images-container">
+        <div class="image-wrapper">
+            <h3>Uploaded Image</h3>
+            <img src="{{ uploaded_image_url }}" alt="Uploaded Image">
+        </div>
+        <div class="image-wrapper">
+            <h3>Predicted Image</h3>
+            <img src="{{ another_image_url }}" alt="Predicted Image">
+            <div>
+                <a href="{{ another_image_url }}" download>Download Predicted Image</a>
+            </div>
+        </div>
+    </div>
+    <div><a href="/">返回會員頁面</a></div>
+</body>
+</html>

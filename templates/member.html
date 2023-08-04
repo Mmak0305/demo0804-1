@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員頁面</title>
+    <script type="text/javascript">
+        function previewFile() {
+            var preview = document.querySelector('img'); // 選擇圖像標籤
+            var file = document.querySelector('input[type=file]').files[0]; // 取得選定的檔案
+            var reader = new FileReader();
+
+        }
+    </script>
+</head>
+<body>
+    <h2>歡迎光臨會員頁面</h2>
+    <div>你好,歡迎光臨</div>
+    <h1>Member System</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" onchange="previewFile()">
+        <input type="submit" value="Upload">
+    </form>
+    <div><a href="/signout">登出</a></div>
+</body>
+</html>
